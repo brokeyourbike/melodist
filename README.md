@@ -14,4 +14,4 @@ Dependency Manager for PHP, written in Go
 
 ## Acknowledgments
 
-This project would be impossibel without the tool we use everyday [composer/composer](https://github.com/composer/composer)
+This project would be impossible without the tool we use everyday [composer/composer](https://github.com/composer/composer)
