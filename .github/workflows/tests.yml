@@ -25,3 +25,13 @@ jobs:
 
     - name: Test
       run: go test -race -covermode=atomic -coverprofile=coverage.out -v ./...
+
+    - name: Upload coverage to codeclimate
+      uses: paambaati/codeclimate-action@v3.0.0
+      continue-on-error: true
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_TOKEN }}
+      with:
+        coverageCommand: ''
+        prefix: 'github.com/brokeyourbike/melodist'
+        coverageLocations: ./coverage.out:gocov
