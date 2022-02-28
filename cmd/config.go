@@ -28,8 +28,6 @@ func newConfigCmd() Command {
 in either the local composer.json file or the global config.json file.
 
 Additionally it lets you edit most properties in the local composer.json.`,
-		// Uncomment the following line if your bare application
-		// has an action associated with it:
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cc.global && cc.file != "" {
 				return errors.New("file and global can not be combined")
